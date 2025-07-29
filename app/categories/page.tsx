@@ -270,7 +270,8 @@ const [selectedCategory, setSelectedCategory] = useState<Category>('Food & Drink
                 {selectedCategory} Questions
               </h2>
               <p className="text-gray-600">
-                {questionsByCategory[selectedCategory as keyof typeof questionsByCategory]?.length} hilarious questions to explore
+               {questionsByCategory[selectedCategory as keyof typeof questionsByCategory].length} hilarious questions to explore
+
               </p>
             </div>
 
