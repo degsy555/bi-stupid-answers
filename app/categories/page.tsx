@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { useState } from 'react';
 import WebHeader from '../../components/WebHeader';
 type Category = 'Food & Drink' | 'Science' | 'Daily Life' | 'Logic';
+
+type Category = 'Food & Drink' | 'Science' | 'Daily Life' | 'Logic';
 const questionsByCategory = {
   'Food & Drink': [
     {
