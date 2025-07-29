@@ -222,6 +222,7 @@ type Category = typeof categoryKeys[number];
   const [expandedQuestion, setExpandedQuestion] = useState<number | null>(null);
 const [selectedCategory, setSelectedCategory] = useState<Category>('Food & Drink');
 
+
   const toggleQuestion = (index: number) => {
     setExpandedQuestion(expandedQuestion === index ? null : index);
   };
