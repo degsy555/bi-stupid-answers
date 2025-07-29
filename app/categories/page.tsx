@@ -1,15 +1,21 @@
 
 'use client';
-
 import Link from 'next/link';
 import { useState } from 'react';
 import WebHeader from '../../components/WebHeader';
-type Category = 'Food & Drink' | 'Science' | 'Daily Life' | 'Logic';
 
 type Category = 'Food & Drink' | 'Science' | 'Daily Life' | 'Logic';
-const questionsByCategory = {
+
+const questionsByCategory: Record<Category, { question: string; answer: string }[]> = {
   'Food & Drink': [
-    {
+    { question: 'Why do we park in driveways and drive on parkways?', answer: 'Because English loves irony.' },
+    // more...
+  ],
+  // other categories...
+};
+
+const [selectedCategory, setSelectedCategory] = useState<Category>('Food & Drink');
+
       question: "Why do hot dogs come in packages of 10 but buns come in packages of 8?",
       answer: "It's actually a marketing conspiracy! Hot dog manufacturers and bun makers are in cahoots to make you buy more of both. You need 5 packs of buns and 4 packs of hot dogs to get an even 40 of each!"
     },
