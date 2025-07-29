@@ -211,8 +211,8 @@ const questionsByCategory = {
 export default function Categories() {
   const categoryKeys = ['Food & Drink', 'Science', 'Daily Life', 'Logic'] as const;
 type Category = typeof categoryKeys[number];
-const [selectedCategory, setSelectedCategory] = useState<Category>('Food & Drink');
   const [expandedQuestion, setExpandedQuestion] = useState<number | null>(null);
+const [selectedCategory, setSelectedCategory] = useState<Category>('Food & Drink');
 
   const toggleQuestion = (index: number) => {
     setExpandedQuestion(expandedQuestion === index ? null : index);
